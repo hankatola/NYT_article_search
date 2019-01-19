@@ -27,9 +27,14 @@ header {
     padding-top: 10px;
 }
 
+.article-content {
+    margin-left: 10px;
+}
+
 .ourcontainer, #article-container, .article-space {
     margin-top: 20px;
     border: 1px solid gainsboro;
     border-radius: 5px;
     padding-bottom: 10px;
+    /* padding: 10px; */
 }
