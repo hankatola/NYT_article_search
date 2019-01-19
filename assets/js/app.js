@@ -8,6 +8,7 @@ $.get('https://cors-anywhere.herokuapp.com/https://api.nytimes.com/svc/search/v2
 
     for (let i = 1; i < count; i++) {
         var div = $('<div class="article-space"></div>');
+        const contentDiv = $('<div class="article-content">');
         var titleHeader = $('<p class="rowheader">');
         var author = $('<p class="author" style="font-weight: bolder;">');
         var p1 = $('<p>');
@@ -22,7 +23,8 @@ $.get('https://cors-anywhere.herokuapp.com/https://api.nytimes.com/svc/search/v2
         author.html(articleData[i].byline.original);
         p3.html(articleData[i].web_url);
 
-        div.append(titleHeader, p1, p2, p3, author);
+        contentDiv.append( p1, p2, p3, author);
+        div.append(titleHeader, contentDiv);
         $("#article-container").append(div);
     }
 
