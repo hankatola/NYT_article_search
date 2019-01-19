@@ -19,6 +19,10 @@ header {
     padding: 15px;
 }
 
+.form-group {
+    padding-top: 10px;
+}
+
 .ourcontainer, #article-container {
     margin-top: 20px;
     border: 1px solid lavender;
