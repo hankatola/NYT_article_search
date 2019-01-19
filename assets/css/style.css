@@ -15,16 +15,13 @@ header {
     font-weight: bold;
     border: none !important;
     background-color: snow;
-    border: 1px solid lightgrey;
-    padding-left: 10px;
-    border
+    border-bottom: 1px solid lavender !important;
+    padding: 15px;
 }
 
-.ourcontainer {
-    border: 1px solid lightgrey;
+.ourcontainer, #article-container {
+    margin-top: 20px;
+    border: 1px solid lavender;
     border-radius: 5px;
-}
-
-#article-container {
-    border: 5px solid red;
+    padding-bottom: 10px;
 }
