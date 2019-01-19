@@ -2,11 +2,22 @@ $.get('https://cors-anywhere.herokuapp.com/https://api.nytimes.com/svc/search/v2
 .then((data) => {
     const articleData = data.response.docs;
     articleData.forEach(article => {
-        console.log(article.pub_date);
-        console.log(article.headline.main);
-        console.log(article.byline.person.firstname + " " + article.byline.person.lastname);
-        console.log(article.snippet);
-        console.log(article.web_url);
+        var div = $('<div>');
+        var titleHeader = $('<h3>');
+        var author = $('<h4>');
+        var p1 = $('<p>');
+        var p2 = $('<p>');
+        var p3 = $('<p>');
+
+        titleHeader.html(article.headline.main);
+        p1.html(article.pub_date);
+        p2.html(article.snippet);
+        author.html(article.byline.person[0].firstname + " " + article.byline.person[0].lastname);
+        p3.html(article.web_url);
+
+        div.append(titleHeader, p1, p2, p3, author);
+        $("#article-container").append(div);
+
 
 
 
