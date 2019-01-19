@@ -15,4 +15,5 @@ header {
     border: 1px solid grey;
     background-color: lightgrey;
     border-radius: 5px;
+    font-weight: bold;
 }
