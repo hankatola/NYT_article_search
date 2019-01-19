@@ -11,8 +11,13 @@ header {
     margin-bottom: 20px;
 }
 
+.form-group {
+    border: 1px solid lightgrey;
+}
+
 #parameters, #articles {
-    border: 1px solid grey;
-    background-color: lightgrey;
+    border: 1px solid lightgrey;
+    background-color: snow;
     border-radius: 5px;
+    font-weight: bold;
 }
