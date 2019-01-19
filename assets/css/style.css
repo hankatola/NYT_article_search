@@ -1,5 +1,5 @@
 header {
-    background-color: #35167a;
+    background-color: #001270;
     color: white;
     font-size: 24px;
     padding: 50px;
@@ -11,13 +11,25 @@ header {
     margin-bottom: 20px;
 }
 
-.form-group {
-    border: 1px solid lightgrey;
+.fa {
+    padding-right: 10px; 
 }
 
-#parameters, #articles {
-    border: 1px solid lightgrey;
-    background-color: snow;
-    border-radius: 5px;
+.rowheader {
     font-weight: bold;
+    border: none !important;
+    background-color: snow;
+    border-bottom: 1px solid gainsboro !important;
+    padding: 15px;
+}
+
+.form-group {
+    padding-top: 10px;
+}
+
+.ourcontainer, #article-container, .article-space {
+    margin-top: 20px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding-bottom: 10px;
 }
