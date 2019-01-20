@@ -16,10 +16,12 @@ const getApiData = (api, limitValue) => {
             var p2 = $('<p>');
             var p3 = $('<p>');
     
-        
+            let date = moment(articleData[i].pub_date);
+            let newDate = date.utc().format('MMMM Do, YYYY');
+            
     
             titleHeader.html(articleData[i].headline.main);
-            p1.html(articleData[i].pub_date);
+            p1.html(newDate);
             p2.html(articleData[i].snippet);
             author.html(articleData[i].byline.original);
             p3.html(articleData[i].web_url);
@@ -51,7 +53,7 @@ const getApiData = (api, limitValue) => {
         } else {
             startDate = event.currentTarget[2].value ? `begin_date=${event.currentTarget[2].value}` : '';
         }
-        console.log(startDate);
+        
 
         if (event.currentTarget[2].value.length < 8) {
             endDate = event.currentTarget[3].value + '1231';
@@ -60,7 +62,7 @@ const getApiData = (api, limitValue) => {
             endDate = event.currentTarget[3].value ? `&end_date=${event.currentTarget[3].value}` : '';
 
         }
-        console.log(endDate);
+    
 
         const baseUrl = 'https://cors-anywhere.herokuapp.com/https://api.nytimes.com/svc/search/v2/articlesearch.json?'
 
